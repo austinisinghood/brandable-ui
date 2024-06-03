@@ -1,0 +1,12 @@
+.accordionContainer {
+  background-color: var(--paper-light);
+  border-radius: 3px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.accordionPanel {
+  border-bottom: 2px solid var(--ink);
+}
+.accordionPanel:last-child {
+  border-bottom: none;
+}

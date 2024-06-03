@@ -1,0 +1,29 @@
+// Default theme
+.default-theme-wrapper {
+  // Fonts
+  --headline: "Newake", serif;
+  --title: "Newake", sans-serif;
+  --subtitle: "Newake", serif;
+  --body: "Outfit", serif;
+  --caption: "Outfit", serif;
+
+  // Colors
+  --primary-dark: #1c1c1c;
+  --primary: #383838;
+  --primary-light: #595959;
+  --secondary-dark: #6f6f6f;
+  --secondary: #8c8c8c;
+  --secondary-light: #a9a9a9;
+  --tertiary-dark: #bfbfbf;
+  --tertiary: #d4d4d4;
+  --tertiary-light: #e9e9e9;
+  --accent-dark: #a69e90;
+  --accent: #bcb5a9;
+  --accent-light: #d2ccc3;
+  --ink-dark: #000000;
+  --ink: #232323;
+  --ink-light: #535456;
+  --paper-dark: #c7beb3;
+  --paper: #fff6ec;
+  --paper-light: #ffffff;
+}

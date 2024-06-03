@@ -1,0 +1,29 @@
+// Fancy theme
+.fancy-theme-wrapper {
+  // Fonts
+  --headline: "Ziporah", sans-serif;
+  --title: "Salemo", sans-serif;
+  --subtitle: "Snell", serif;
+  --body: "Salemo", serif;
+  --caption: "Roboto", serif;
+
+  // Colors
+  --primary-dark: #24351f;
+  --primary: #004f2f;
+  --primary-light: #b8b862;
+  --secondary-dark: #6c789e;
+  --secondary: #9ca7d6;
+  --secondary-light: #ffa500;
+  --tertiary-dark: #9b013a;
+  --tertiary: #bc1559;
+  --tertiary-light: #ffa6bc;
+  --accent-dark: #bc732a;
+  --accent: #ec983a;
+  --accent-light: #ffa500;
+  --ink-dark: #000000;
+  --ink: #232323;
+  --ink-light: #535456;
+  --paper-dark: #c7beb3;
+  --paper: #ebe5d0;
+  --paper-light: #ffffff;
+}

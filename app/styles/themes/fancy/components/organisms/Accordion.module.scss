@@ -1,0 +1,10 @@
+.accordionContainer {
+  background-color: var(--primary-light);
+}
+
+.accordionPanel {
+  border-bottom: 2px solid var(--paper-light);
+}
+.accordionPanel:last-child {
+  border-bottom: none;
+}

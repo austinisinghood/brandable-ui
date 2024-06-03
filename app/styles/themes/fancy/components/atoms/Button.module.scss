@@ -1,0 +1,143 @@
+// Base styles for the button
+.buttonWrapper {
+}
+
+.buttonContainer {
+  padding: 0.5rem 0 0 0;
+}
+
+.button {
+  border-radius: 0; /* Remove border-radius for sharp corners */
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-2px); /* Slight raise effect on hover */
+  }
+
+  &:active {
+    transform: translateY(1px); /* Pressed effect when clicked */
+  }
+}
+
+// Size variations
+.button.sm {
+  font-size: 1em;
+  padding: 0.5rem 1rem;
+}
+
+.button.md {
+  font-size: 1.25em;
+  padding: 1rem 1.75rem;
+}
+
+.button.lg {
+  font-size: 1.5em;
+  padding: 1.25rem 2.25rem;
+}
+
+// Variant styles
+.button.outline {
+  background: transparent;
+  border: 4px solid currentColor; // Inherits the current text color
+
+  &.primary {
+    color: var(--primary);
+    &:hover {
+      border-color: var(--primary-light);
+    }
+  }
+
+  &.secondary {
+    color: var(--secondary);
+    &:hover {
+      border-color: var(--secondary-light);
+    }
+  }
+
+  &.tertiary {
+    color: var(--tertiary);
+    &:hover {
+      border-color: var(--tertiary-light);
+    }
+  }
+
+  &.accent {
+    color: var(--accent);
+    &:hover {
+      border-color: var(--accent-light);
+    }
+  }
+
+  &.ink {
+    color: var(--ink);
+    &:hover {
+      border-color: var(--ink-light);
+    }
+  }
+
+  &.paper {
+    color: var(--paper);
+    &:hover {
+      border-color: var(--paper-dark);
+    }
+  }
+}
+
+.button.solid {
+  border: none;
+
+  &.primary {
+    color: var(--paper);
+    background-color: var(--primary);
+    &:hover {
+      background-color: var(--primary-light);
+    }
+  }
+
+  &.secondary {
+    color: var(--paper);
+    background-color: var(--secondary);
+    &:hover {
+      background-color: var(--secondary-light);
+    }
+  }
+
+  &.tertiary {
+    color: var(--paper);
+    background-color: var(--tertiary);
+    &:hover {
+      background-color: var(--tertiary-light);
+    }
+  }
+
+  &.accent {
+    color: var(--paper);
+    background-color: var(--accent);
+    &:hover {
+      background-color: var(--accent-light);
+    }
+  }
+
+  &.ink {
+    color: var(--paper);
+    background-color: var(--ink);
+    &:hover {
+      background-color: var(--ink-light);
+    }
+  }
+
+  &.paper {
+    color: var(--ink); // ensures text is visible
+    background-color: var(--paper);
+    &:hover {
+      background-color: var(--paper-light);
+    }
+  }
+}
+
+// Active state
+.button.active {
+  transform: scale(1.05);
+}
