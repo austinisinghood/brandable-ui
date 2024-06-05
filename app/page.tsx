@@ -21,6 +21,9 @@ export default async function PageSlugRoute({ params }: any) {
       <main>
         {blocks}
         <div className="py-48">
+          <h1 className="w-full max-w-screen-2xl roar text-ink mx-auto pb-12">
+            Brandable UI
+          </h1>
           <BrandDisplay />
           <ComponentList />
         </div>
