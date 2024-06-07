@@ -25,7 +25,7 @@ export default async function PageSlugRoute({ params }: any) {
             Brandable UI
           </h1>
           <BrandDisplay />
-          <ComponentList />
+          {/* <ComponentList /> */}
         </div>
       </main>
     </>
