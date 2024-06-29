@@ -1,7 +1,7 @@
 import Head from "next/head";
 
-import ComponentInDevelopment from "@/app/documentation/ui/ComponentInDevelopment";
-import ComponentList from "@/app/documentation/ui/ComponentList";
+import ComponentInDevelopment from "../ui/ComponentInDevelopment";
+import ComponentList from "../ui/ComponentList";
 
 import { blockMapper } from "@/app/blocks/utils/";
 
