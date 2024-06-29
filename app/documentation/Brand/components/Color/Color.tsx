@@ -18,14 +18,14 @@ export const Color = () => {
         className="w-full flex items-center justify-between cursor-pointer pt-12"
         onClick={toggleExpand}
       >
-        <label className="w-full label-text cursor-pointer">
-          {theme} Colors
+        <label className="w-full flex flex-row items-center justify-start cursor-pointer">
+          <span className="label-text">Color</span>
         </label>
         {isExpanded ? <FaChevronUp /> : <FaChevronDown />}
       </div>
       <hr className="w-full my-6" />
       {isExpanded && (
-        <div className="w-full flex flex-col items-center sm:flex-row sm:justify-start sm:flex-wrap">
+        <div className="w-full flex flex-col items-center bg-white border border-zinc-200 pt-6 px-6 pb-24 rounded-md sm:flex-row sm:justify-start sm:flex-wrap">
           <div className="w-full p-2 sm:w-1/3">
             <div className="w-full h-[150px] bg-primary-dark mb-1 border" />
             <code className="mb-4">.primary-dark</code>

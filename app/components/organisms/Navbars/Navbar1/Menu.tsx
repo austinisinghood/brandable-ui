@@ -33,15 +33,14 @@ export const Menu = ({ setIsOpen, isOpen, navItems }: MenuProps) => {
       )}
     >
       {navItems.map((item, index) => (
-        <li
-          key={index}
-          className="button-text mb-6 transition-all duration-500 ease-in-out lg:ml-6 lg:mb-0"
-        >
+        <li key={index} className="button-text mb-12 lg:ml-6 lg:mb-0">
           <Link
             href={item.href}
             className={twMerge(
-              `text-5xl border-b-8 border-transparent transition-all duration-200 ease-in-out lg:text-xl lg:border-b-4`,
-              pathname === item.href ? "" : ""
+              `text-5xl border-b-4 border-transparent lg:text-xl lg:border-b-2`,
+              pathname === item.href
+                ? "text-ink border-ink"
+                : "text-ink hover:ink"
             )}
             onClick={() => setIsOpen(false)}
           >
@@ -49,7 +48,7 @@ export const Menu = ({ setIsOpen, isOpen, navItems }: MenuProps) => {
           </Link>
         </li>
       ))}
-      <li className="mb-4 transition-all duration-500 ease-in-out lg:ml-6 lg:mb-0">
+      <li className="mb-4 lg:ml-6 lg:mb-0">
         <AnchorLink
           href="#contact"
           offset={-50}

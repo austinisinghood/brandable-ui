@@ -68,20 +68,22 @@ export default function RootLayout({
               model={1}
               navItems={[
                 { label: "Home", href: "/" },
+                { label: "Brand", href: "/documentation/brand" },
+                { label: "UI", href: "/documentation/ui" },
                 { label: "Test Page", href: "test-page" },
               ]}
+              alert={<ThemeChanger />}
             />
             {children}
             <blocks.FooterBlock
               model={1}
               navItems={[
-                { label: "Projects", href: "/projects" },
-                { label: "Packages", href: "/packages" },
-                { label: "About", href: "/about" },
-                { label: "Contact", href: "#contact" },
+                { label: "Home", href: "/" },
+                { label: "Brand", href: "/documentation/brand" },
+                { label: "UI", href: "/documentation/ui" },
+                { label: "Test Page", href: "test-page" },
               ]}
             />
-            <ThemeChanger />
           </div>
         )}
       </body>

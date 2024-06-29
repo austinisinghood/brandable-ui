@@ -1,5 +1,7 @@
 import Head from "next/head";
 
+import BrandDisplay from "@/app/documentation/brand/BrandDisplay";
+
 import { getPageData } from "@/sanity/sanity.query";
 
 export default async function PageSlugRoute({ params }: any) {
@@ -14,9 +16,10 @@ export default async function PageSlugRoute({ params }: any) {
       </Head>
       <main className="bg-zinc-100">
         <div className="w-full max-w-screen-2xl mx-auto py-48 px-6">
-          <h1 className="w-full max-w-screen-2xl roar text-ink mx-auto pb-12">
-            This is Brandable UI
+          <h1 className="w-full max-w-screen-2xl roar text-ink mx-auto">
+            Brand
           </h1>
+          <BrandDisplay />
         </div>
       </main>
     </>

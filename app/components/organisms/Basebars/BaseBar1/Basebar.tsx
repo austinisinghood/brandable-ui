@@ -59,7 +59,7 @@ export function Basebar({ navItems }: MenuProps) {
                 <Link
                   href={item.href}
                   className={twMerge(
-                    `button-text mx-2 border-b-2 border-transparent transition-all duration-200 ease-in-out lg:border-b-4`,
+                    `button-text mx-2 border-b border-transparent transition-all duration-200 ease-in-out lg:border-b-2`,
                     pathname === item.href
                       ? "text-ink border-ink"
                       : "text-ink hover:ink"

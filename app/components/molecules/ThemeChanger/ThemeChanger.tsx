@@ -10,16 +10,33 @@ export const ThemeChanger = () => {
 
   return (
     <>
-      <pre className="z-50 fixed bottom-6 right-6 h-[45px] flex flex-row items-center justify-center bg-paper px-4 py-2 rounded-lg shadow-sm">
-        <button className="" onClick={() => setIsOpen(!isOpen)}>
-          <FaCode className="text-ink" />
+      <div className="w-fit flex flex-row items-center justify-center bg-zinc-500 mx-auto px-4 py-2">
+        <button
+          className="absolute z-50 w-full h-full flex items-center justify-center chat  bg-zinc-500 text-paper-light px-6 shadow-lg"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <FaCode className="mr-2" /> Current Theme:{" "}
+          <div className="ml-2">
+            <code className="">{theme}</code>
+          </div>
         </button>
-        {isOpen && (
-          <div className="w-fit pl-4 space-x-2">
+        <>
+          {isOpen && (
+            <div
+              className="absolute z-40 w-full h-screen top-0 left-0"
+              onMouseOver={() => setIsOpen(false)}
+            />
+          )}
+          <div
+            className={twMerge(
+              `absolute z-40 w-fit min-w-[250px] h-[150px] flex flex-col items-start justify-start bg-zinc-200 pt-[60px] pb-2 rounded-b-md transition-all duration-300 ease-in-out`,
+              isOpen ? "top-0" : "-top-[150px]"
+            )}
+          >
             <button
               className={twMerge(
-                `text-ink`,
-                theme === "default" && "text-lime-500"
+                `w-full text-zinc-400 chat py-1 px-3 border-b last-of-type:border-none`,
+                theme === "default" && "text-white bg-zinc-500"
               )}
               onClick={() => setTheme("default")}
             >
@@ -27,16 +44,16 @@ export const ThemeChanger = () => {
             </button>
             <button
               className={twMerge(
-                `text-ink`,
-                theme === "fancy" && "text-lime-500"
+                `w-full text-zinc-400 chat pt-2 pb-1 px-3 border-b last-of-type:border-none`,
+                theme === "fancy" && "text-white bg-zinc-500"
               )}
               onClick={() => setTheme("fancy")}
             >
               Fancy
             </button>
           </div>
-        )}
-      </pre>
+        </>
+      </div>
     </>
   );
 };

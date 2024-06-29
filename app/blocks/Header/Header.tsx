@@ -15,5 +15,9 @@ export const HeaderBlock = (props: any) => {
       header = <Navbar {...props} />;
   }
 
-  return <Navbar {...props} />;
+  return (
+    <div className={props.className}>
+      <Navbar {...props} />
+    </div>
+  );
 };

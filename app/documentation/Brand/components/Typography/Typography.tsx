@@ -18,14 +18,14 @@ export const Typography = () => {
         className="w-full flex items-center justify-between cursor-pointer pt-12"
         onClick={toggleExpand}
       >
-        <label className="w-full label-text cursor-pointer">
-          {theme} Typography
+        <label className="w-full flex flex-row items-center justify-start cursor-pointer">
+          <span className="label-text">Typography</span>
         </label>
         {isExpanded ? <FaChevronUp /> : <FaChevronDown />}
       </div>
       <hr className="w-full my-6" />
       {isExpanded && (
-        <div className="w-full flex flex-col items-start">
+        <div className="w-full flex flex-col items-start bg-white border border-zinc-200 pt-6 px-6 pb-24 rounded-md">
           <h1 className="roar text-ink pt-6">
             Level-up your brand at Hanker House
           </h1>

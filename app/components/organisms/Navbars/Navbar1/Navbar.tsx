@@ -17,9 +17,10 @@ interface NavbarProps {
     label: string;
     href: string;
   }[];
+  alert?: React.ReactNode;
 }
 
-export function Navbar({ navItems }: NavbarProps) {
+export function Navbar({ navItems, alert }: NavbarProps) {
   const { styles, theme } = useTheme();
 
   // Hamburger color
@@ -59,64 +60,74 @@ export function Navbar({ navItems }: NavbarProps) {
   // The actual navbar
   return hideNav ? null : (
     // Navbar container
-    <header
-      className={twMerge(
-        `absolute top-0 z-40 w-full h-[150px] -mb-[150px]`,
-        styles.NavbarContainer
+    <>
+      {alert && (
+        <div className="z-50 fixed top-0 right-0 w-full h-[45px] flex flex-row items-center justify-center px-4 py-2 rounded-lg shadow-sm">
+          {alert}
+        </div>
       )}
-    >
-      {/* Navbar wrapper */}
-      <motion.div
-        className={twMerge(`w-full p-6`, styles.navbarWrapper)}
-        initial={{ opacity: 0, y: -50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ type: "spring", duration: 1 }}
-        viewport={{ once: true }}
+      <header
+        className={twMerge(
+          `absolute top-0 z-40 w-full h-[150px] -mb-[150px]`,
+          alert !== undefined && `mt-10`,
+          styles.NavbarContainer
+        )}
       >
-        {/* The navbar itself */}
-        <nav
-          className={twMerge(
-            `w-full max-w-screen-xl flex flex-row items-center justify-between mx-auto p-2`,
-            styles.navbar
-          )}
+        {/* Navbar wrapper */}
+        <motion.div
+          className={twMerge(`w-full p-6`, styles.navbarWrapper)}
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ type: "spring", duration: 1 }}
+          viewport={{ once: true }}
         >
-          {/* The brand logo */}
-          <Link className={twMerge(styles.navbarLogo, `z-40`)} href="/">
-            <Image
-              src={`/logos/${theme}/navbar-logo.png`}
-              alt="Brandable UI logo"
-              width={350}
-              height={100}
-              priority
-            />
-          </Link>
-          {/* The mobile menu button/hamburger nav */}
-          <div className="relative z-40 lg:hidden">
-            <Hamburger
-              toggled={isOpen}
-              toggle={toggleMenu}
-              duration={0.75}
-              size={30}
-              distance="sm"
-              color={hamburgerColor}
-              rounded
-            />
-          </div>
-          {/* Desktop Menu */}
-          <div className="hidden lg:flex w-full flex-row items-center justify-end">
+          {/* The navbar itself */}
+          <nav
+            className={twMerge(
+              `w-full max-w-screen-xl flex flex-row items-center justify-between mx-auto p-2`,
+              styles.navbar
+            )}
+          >
+            {/* The brand logo */}
+            <Link className={twMerge(styles.navbarLogo, `z-40`)} href="/">
+              <Image
+                src={`/logos/${theme}/navbar-logo.png`}
+                alt="Brandable UI logo"
+                width={350}
+                height={100}
+                priority
+              />
+            </Link>
+            {/* The mobile menu button/hamburger nav */}
+            <div className="relative z-40 lg:hidden">
+              <Hamburger
+                toggled={isOpen}
+                toggle={toggleMenu}
+                duration={0.75}
+                size={30}
+                distance="sm"
+                color={hamburgerColor}
+                rounded
+              />
+            </div>
+            {/* Desktop Menu */}
+            <div className="hidden lg:flex w-full flex-row items-center justify-end">
+              <Menu setIsOpen={setIsOpen} isOpen={isOpen} navItems={navItems} />
+            </div>
+          </nav>
+          {/* Mobile "pop up" menu */}
+          <div
+            className={twMerge(
+              `z-30 fixed top-0 w-full h-screen flex items-center justify-center transition-all ease-in-out lg:hidden`,
+              isOpen
+                ? `right-0 duration-[.75s]`
+                : `-right-[200vw] duration-[1s]`
+            )}
+          >
             <Menu setIsOpen={setIsOpen} isOpen={isOpen} navItems={navItems} />
           </div>
-        </nav>
-        {/* Mobile "pop up" menu */}
-        <div
-          className={twMerge(
-            `z-30 fixed top-0 w-full h-screen flex items-center justify-center transition-all ease-in-out lg:hidden`,
-            isOpen ? `right-0 duration-[.75s]` : `-right-[200vw] duration-[1s]`
-          )}
-        >
-          <Menu setIsOpen={setIsOpen} isOpen={isOpen} navItems={navItems} />
-        </div>
-      </motion.div>
-    </header>
+        </motion.div>
+      </header>
+    </>
   );
 }
