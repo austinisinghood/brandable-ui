@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import BrandDisplay from "documentation/brand/BrandDisplay";
+import BrandDisplay from "@/app/documentation/brand/BrandDisplay";
 
 import { getPageData } from "@/sanity/sanity.query";
 

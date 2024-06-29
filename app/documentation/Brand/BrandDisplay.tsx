@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { Color, Typography } from "documentation/brand";
+import { Color, Typography } from "@/app/documentation/brand";
 
 import { useTheme } from "@/app/hooks/useTheme";
 
