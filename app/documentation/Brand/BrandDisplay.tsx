@@ -2,8 +2,8 @@
 
 import React from "react";
 
-import { Color } from "../brand/components/Color/Color";
-import { Typography } from "../brand/components/Typography/Typography";
+import { Color } from "./components/Color/Color";
+import { Typography } from "./components/Typography/Typography";
 
 import { useTheme } from "@/app/hooks/useTheme";
 
