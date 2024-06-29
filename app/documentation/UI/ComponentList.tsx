@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { useTheme } from "@/app/hooks/useTheme";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 import { Accordion, Button, Hero, Toggle, Roles } from "@/app/components";
 

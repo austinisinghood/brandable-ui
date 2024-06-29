@@ -18,6 +18,7 @@
       "pages/*": ["./app/pages/*"],
       "features/*": ["./app/features/*"],
       "components/*": ["./app/components/*"],
+      "documentation/*": ["./app/documentation/*"],
       "types/*": ["/types/*"],
       "sanity/*": ["./sanity/*"],
       "styles/*": ["./app/styles/*"],
