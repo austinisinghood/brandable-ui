@@ -68,8 +68,8 @@ export default function RootLayout({
               model={1}
               navItems={[
                 { label: "Home", href: "/" },
-                { label: "Brand", href: "/documentation/brand" },
-                { label: "UI", href: "/documentation/ui" },
+                { label: "Brand", href: "/documentation/brand-guide" },
+                { label: "UI", href: "/documentation/ui-components" },
                 { label: "Test Page", href: "test-page" },
               ]}
               alert={<ThemeChanger />}
@@ -79,8 +79,8 @@ export default function RootLayout({
               model={1}
               navItems={[
                 { label: "Home", href: "/" },
-                { label: "Brand", href: "/documentation/brand" },
-                { label: "UI", href: "/documentation/ui" },
+                { label: "Brand", href: "/documentation/brand-guide" },
+                { label: "UI", href: "/documentation/ui-components" },
                 { label: "Test Page", href: "test-page" },
               ]}
             />
