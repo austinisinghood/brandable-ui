@@ -21,6 +21,7 @@
   left: 0;
   right: 0;
   bottom: 0;
+  background-color: var(--accent-light);
   border-radius: 34px;
   transition: 0.4s;
 }
@@ -32,142 +33,12 @@
   width: 26px;
   left: 4px;
   bottom: 4px;
+  background-color: var(--paper-light);
   border-radius: 50%;
   transition: 0.4s;
 }
 
 input:checked + .slider:before {
   transform: translateX(26px);
-}
-
-// Primary
-input.primary:checked + .slider {
-  background-color: var(--primary);
-}
-input.primary:focus + .slider {
-  box-shadow: 0 0 1px var(--primary);
-}
-.slider.primary {
-  background-color: var(--paper-dark);
-}
-.slider.primary:before {
   background-color: var(--paper-light);
-}
-
-// Secondary
-input.secondary:checked + .slider {
-  background-color: var(--secondary);
-}
-input.secondary:focus + .slider {
-  box-shadow: 0 0 1px var(--secondary);
-}
-.slider.secondary {
-  background-color: var(--paper-dark);
-}
-.slider.secondary:before {
-  background-color: var(--paper-light);
-}
-
-// Tertiary
-input.tertiary:checked + .slider {
-  background-color: var(--tertiary);
-}
-input.tertiary:focus + .slider {
-  box-shadow: 0 0 1px var(--tertiary);
-}
-.slider.tertiary {
-  background-color: var(--paper-dark);
-}
-.slider.tertiary:before {
-  background-color: var(--paper-light);
-}
-
-// Accent
-input.accent:checked + .slider {
-  background-color: var(--accent);
-}
-input.accent:focus + .slider {
-  box-shadow: 0 0 1px var(--accent);
-}
-.slider.accent {
-  background-color: var(--paper-dark);
-}
-.slider.accent:before {
-  background-color: var(--paper-light);
-}
-
-// Ink
-input.ink:checked + .slider {
-  background-color: var(--ink);
-}
-input.ink:focus + .slider {
-  box-shadow: 0 0 1px var(--ink);
-}
-.slider.ink {
-  background-color: var(--paper-dark);
-}
-.slider.ink:before {
-  background-color: var(--paper-light);
-}
-
-// Paper
-input.paper:checked + .slider {
-  background-color: var(--paper-dark);
-}
-input.paper:focus + .slider {
-  box-shadow: 0 0 1px var(--paper-dark);
-}
-.slider.paper {
-  background-color: var(--paper);
-}
-.slider.paper:before {
-  background-color: var(--ink-light);
-}
-
-/* Size Variations */
-.toggle.sm {
-  width: 40px;
-  height: 22px;
-
-  .slider:before {
-    width: 16px;
-    height: 16px;
-    transform: translateX(18px);
-  }
-}
-
-.toggle.md {
-  /* No changes needed, default size is already set */
-}
-
-.toggle.lg {
-  width: 80px;
-  height: 44px;
-
-  .slider:before {
-    width: 36px;
-    height: 36px;
-    transform: translateX(40px);
-  }
-}
-
-/* Color Variations */
-.toggle.primary {
-  input:checked + .slider {
-    background-color: var(--primary);
-  }
-
-  input:focus + .slider {
-    box-shadow: 0 0 1px var(--primary);
-  }
-}
-
-.toggle.secondary {
-  input:checked + .slider {
-    background-color: var(--secondary);
-  }
-
-  input:focus + .slider {
-    box-shadow: 0 0 1px var(--secondary);
-  }
 }

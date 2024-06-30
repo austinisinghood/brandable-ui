@@ -42,22 +42,24 @@ export const Button: React.FC<ButtonProps> = ({
   );
 
   return (
-    <button
-      className={twMerge(buttonClassName, styles.buttonWrapper, `button-text`)}
-      aria-label={
-        ariaLabel || (typeof children === "string" ? children : undefined)
-      }
-      aria-pressed={active}
-      {...props}
-    >
-      <div
-        className={twMerge(
-          styles.buttonContainer,
-          "w-fit h-fit flex items-center justify-center"
-        )}
+    <div className={styles.buttonWrapper}>
+      <button
+        className={twMerge(buttonClassName, `button-text`)}
+        aria-label={
+          ariaLabel || (typeof children === "string" ? children : undefined)
+        }
+        aria-pressed={active}
+        {...props}
       >
-        {children}
-      </div>
-    </button>
+        <div
+          className={twMerge(
+            styles.buttonContainer,
+            "w-fit h-fit flex items-center justify-center"
+          )}
+        >
+          {children}
+        </div>
+      </button>
+    </div>
   );
 };

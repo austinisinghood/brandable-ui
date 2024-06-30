@@ -4,7 +4,16 @@ import React, { useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { useTheme } from "@/app/hooks/useTheme";
 
-import { Accordion, Button, Hero, Toggle, Roles } from "@/app/components";
+import {
+  Accordion,
+  Button,
+  Hero,
+  Input,
+  Radio,
+  Textarea,
+  Toggle,
+  Roles,
+} from "@/app/components";
 
 interface CompProps {
   title: string;
@@ -69,19 +78,134 @@ const Components = () => {
         {activeTab === 0 && (
           <>
             <Comp title="<Button />">
-              <Button
-                color="accent"
-                variant="solid"
-                size="md"
-                onClick={() => alert("You clicked me!")}
-              >
-                Test
-              </Button>
+              <div className="w-full flex flex-row items-center justify-start space-x-4 pb-4">
+                <Button
+                  color="primary"
+                  variant="solid"
+                  size="md"
+                  onClick={() => alert("You clicked me!")}
+                >
+                  Primary
+                </Button>
+                <Button
+                  color="secondary"
+                  variant="solid"
+                  size="md"
+                  onClick={() => alert("You clicked me!")}
+                >
+                  Secondary
+                </Button>
+                <Button
+                  color="tertiary"
+                  variant="solid"
+                  size="md"
+                  onClick={() => alert("You clicked me!")}
+                >
+                  Tertiary
+                </Button>
+                <Button
+                  color="accent"
+                  variant="solid"
+                  size="md"
+                  onClick={() => alert("You clicked me!")}
+                >
+                  Accent
+                </Button>
+                <Button
+                  color="ink"
+                  variant="solid"
+                  size="md"
+                  onClick={() => alert("You clicked me!")}
+                >
+                  Ink
+                </Button>
+                <Button
+                  color="paper"
+                  variant="solid"
+                  size="md"
+                  onClick={() => alert("You clicked me!")}
+                >
+                  Paper
+                </Button>
+              </div>
+              <div className="w-full flex flex-row items-center justify-start space-x-4">
+                <Button
+                  color="primary"
+                  variant="outline"
+                  size="md"
+                  onClick={() => alert("You clicked me!")}
+                >
+                  Primary
+                </Button>
+                <Button
+                  color="secondary"
+                  variant="outline"
+                  size="md"
+                  onClick={() => alert("You clicked me!")}
+                >
+                  Secondary
+                </Button>
+                <Button
+                  color="tertiary"
+                  variant="outline"
+                  size="md"
+                  onClick={() => alert("You clicked me!")}
+                >
+                  Tertiary
+                </Button>
+                <Button
+                  color="accent"
+                  variant="outline"
+                  size="md"
+                  onClick={() => alert("You clicked me!")}
+                >
+                  Accent
+                </Button>
+                <Button
+                  color="ink"
+                  variant="outline"
+                  size="md"
+                  onClick={() => alert("You clicked me!")}
+                >
+                  Ink
+                </Button>
+                <Button
+                  color="paper"
+                  variant="outline"
+                  size="md"
+                  onClick={() => alert("You clicked me!")}
+                >
+                  Paper
+                </Button>
+              </div>
+            </Comp>
+            <Comp title="<Input />">
+              <div className="w-full max-w-[450px]">
+                <Input
+                  name="Test Input"
+                  label="Test Input"
+                  placeholder="Type text here"
+                />
+              </div>
+            </Comp>
+            <Comp title="<Radio />">
+              <fieldset className="w-full flex flex-row items-start justify-start space-x-4">
+                <Radio id="test1" name="testGroup" label="Test 1" />
+                <Radio id="test2" name="testGroup" label="Test 2" />
+                <Radio id="test3" name="testGroup" label="Test 3" />
+              </fieldset>
+            </Comp>
+            <Comp title="<Textarea />">
+              <div className="w-full max-w-[450px]">
+                <Textarea
+                  name="Test Textarea"
+                  label="Test Textarea"
+                  placeholder="Type your message here"
+                />
+              </div>
             </Comp>
             <Comp title="<Toggle />">
               <Toggle
-                variantSize="lg"
-                color="accent"
                 label="Label"
                 onChange={() => setTimeout(() => alert("You toggled me!"), 150)}
               />

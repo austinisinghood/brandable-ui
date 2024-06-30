@@ -1,0 +1,29 @@
+// Default theme
+.retropop-theme-wrapper {
+  // Fonts
+  --headline: "Nimbus", serif;
+  --title: "Nimbus", sans-serif;
+  --subtitle: "Nunito", serif;
+  --body: "Nunito", serif;
+  --caption: "Nunito", serif;
+
+  // Colors
+  --primary-dark: #827fdb;
+  --primary: #b0a8fe;
+  --primary-light: #cbcafc;
+  --secondary-dark: #dc8eef;
+  --secondary: #edb4f8;
+  --secondary-light: #eecbf7;
+  --tertiary-dark: #f49267;
+  --tertiary: #ffb28c;
+  --tertiary-light: #fcc8b1;
+  --accent-dark: #e8f445;
+  --accent: #def080;
+  --accent-light: #f2fca7;
+  --ink-dark: #000000;
+  --ink: #141414;
+  --ink-light: #393a3d;
+  --paper-dark: #eadbca;
+  --paper: #fff2e1;
+  --paper-light: #ffffff;
+}

@@ -1,35 +1,40 @@
 import { InputHTMLAttributes } from "react";
 import { twMerge } from "tailwind-merge";
 
-import styles from "./styles/Hanker.module.scss";
+import { useTheme } from "@/app/hooks/useTheme";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
   label: string;
 }
 
-const Input = ({ name, label, ...rest }: InputProps) => {
+export const Input = ({ name, label, ...rest }: InputProps) => {
+  const { styles } = useTheme();
+
   const isRequired = rest.required ? "* Field is required" : "";
 
   return (
-    <div className={twMerge(`relative w-full flex flex-col pb-6`)}>
-      <label
-        htmlFor={name}
-        className={twMerge(`w-full label-text text-ink pt-12 pb-4`)}
-      >
+    <div
+      className={twMerge(
+        `w-full`,
+        styles.inputContainer,
+        styles.inputContainer
+      )}
+    >
+      <label htmlFor={name} className={twMerge(`label-text`, styles.label)}>
         {label}
       </label>
       <input
         name={name}
-        className={twMerge(
-          `w-full talk text-ink-dark bg-transparent p-2 border-b-4 border-ink indent-4 outline-none hover:border-accent focus:border-accent transition-all ease-in-out duration-200 sm:indent-2`,
-          styles.textInput
-        )}
+        id={name}
+        className={twMerge(`chat`, styles.textInput)}
         {...rest}
       />
-      <span className="pt-3 whisper text-ink-light">{isRequired}</span>
+      {isRequired && (
+        <span className={twMerge(`whisper`, styles.requiredMessage)}>
+          {isRequired}
+        </span>
+      )}
     </div>
   );
 };
-
-export default Input;

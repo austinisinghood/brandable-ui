@@ -129,7 +129,7 @@ export const Menu = ({ setIsOpen, isOpen, navItems }: MenuProps) => {
                                   className="hidden w-full items-center justify-center lg:flex"
                                   color="paper"
                                   variant="solid"
-                                  size="lg"
+                                  size="sm"
                                 >
                                   {subNavItem.label}
                                 </Button>
@@ -176,7 +176,7 @@ export const Menu = ({ setIsOpen, isOpen, navItems }: MenuProps) => {
                 className="hidden w-full items-center justify-center lg:flex"
                 color="ink"
                 variant="solid"
-                size="lg"
+                size="sm"
               >
                 {item.label}
               </Button>

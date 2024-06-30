@@ -1,0 +1,42 @@
+.textInput {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+.inputContainer {
+  border: 5px solid red;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+
+  label {
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: var(--ink);
+  }
+
+  .textInput {
+    padding: 0.5rem;
+    background-color: var(--paper-light);
+    border: 4px solid var(--accent);
+    border-radius: 3px;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.1s ease;
+    cursor: text;
+
+    &:hover {
+      border: 4px solid var(--accent-dark);
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .requiredMessage {
+    margin-top: 5px;
+    color: var(--accent-dark);
+  }
+}

@@ -86,7 +86,7 @@ export function Basebar({ navItems }: MenuProps) {
           </small>
           <small className="talk text-ink">
             <a
-              href="https://hankerhouse.com/"
+              href="https://austinisinghood.com/"
               target="_blank"
               rel="noreferrer noopener"
             >
