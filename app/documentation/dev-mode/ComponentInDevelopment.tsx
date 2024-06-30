@@ -30,7 +30,7 @@ const ComponentInDevelopment = () => {
     <div className="w-full max-w-screen-2xl flex flex-col items-center justify-center mx-auto pt-12 pb-48">
       <div className="w-full flex flex-col items-start justify-center space-y-4 px-3">
         {/* Button */}
-        <Comp title="<Button />">
+        <Comp title="dev_mode">
           <Button
             color="accent"
             variant="solid"

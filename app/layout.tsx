@@ -67,10 +67,30 @@ export default function RootLayout({
             <blocks.HeaderBlock
               model={1}
               navItems={[
-                { label: "Home", href: "/" },
-                { label: "Brand", href: "/documentation/brand-guide" },
-                { label: "UI", href: "/documentation/ui-components" },
-                { label: "Test Page", href: "test-page" },
+                { label: "Home", href: "/", type: "link" },
+                {
+                  label: "Brand",
+                  href: "/documentation/brand-guide",
+                  type: "link",
+                },
+                {
+                  label: "UI",
+                  href: "/documentation/ui-components",
+                  type: "link",
+                  subNavItems: [
+                    {
+                      label: "Components",
+                      href: "/documentation/ui-components",
+                      type: "link",
+                    },
+                    {
+                      label: "Dev Mode",
+                      href: "/documentation/dev-mode",
+                      type: "button",
+                    },
+                  ],
+                },
+                { label: "Test Page", href: "test-page", type: "link" },
               ]}
               alert={<ThemeChanger />}
             />

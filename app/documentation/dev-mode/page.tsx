@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import ComponentList from "./ComponentList";
+import ComponentInDevelopment from "./ComponentInDevelopment";
 
 import { blockMapper } from "@/app/blocks/utils/";
 
@@ -20,10 +20,7 @@ export default async function PageSlugRoute({ params }: any) {
       <main className="bg-zinc-100">
         {blocks}
         <div className="w-full max-w-screen-2xl mx-auto py-48 px-6">
-          <h1 className="w-full max-w-screen-2xl roar text-ink mx-auto pb-12">
-            Components
-          </h1>
-          <ComponentList />
+          <ComponentInDevelopment />
         </div>
       </main>
     </>
