@@ -13,7 +13,7 @@ interface CompProps {
 const Comp = ({ title, children }: CompProps) => {
   return (
     <div className="w-full pt-6">
-      <div className="relative w-full flex flex-col items-start justify-start bg-white border border-zinc-200 pt-6 px-6 pb-24 rounded-md">
+      <div className="relative w-full flex flex-col items-start justify-start bg-zinc-700 border border-zinc-200 pt-6 px-6 pb-24 rounded-md">
         <div className="absolute -top-10 left-6 bg-zinc-200 pt-1 px-2 pb-3 rounded-t-md">
           <code className="">{title}</code>
         </div>
@@ -40,7 +40,7 @@ const ComponentInDevelopment = () => {
             Test
           </Button>
         </Comp>
-        <h6 className="whisper">
+        <h6 className="whisper text-zinc-600">
           * This component is currently in development.
         </h6>
       </div>

@@ -17,7 +17,7 @@ export default async function PageSlugRoute({ params }: any) {
         <meta name="description" content={pageData.seoDescription} />
         <meta property="og:image" content={pageData.seoImage?.asset.url} />
       </Head>
-      <main className="bg-zinc-100">
+      <main className="bg-zinc-900">
         {blocks}
         <div className="w-full max-w-screen-2xl mx-auto py-48 px-6">
           <ComponentInDevelopment />

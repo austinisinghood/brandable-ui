@@ -65,17 +65,21 @@ export const Menu = ({ setIsOpen, isOpen, navItems }: MenuProps) => {
                     />
                   )}
                 </AnimatePresence>
-                <div className="relative flex flex-col items-center">
+                <div className="relative flex flex-col items-center justify-center lg:mt-1">
                   <button
                     onClick={() => toggleSubmenu(index)}
-                    className={twMerge(
-                      `relative z-0 text-5xl border-b-4 border-transparent lg:text-xl lg:border-b-2`,
-                      pathname === item.href
-                        ? "text-ink border-ink"
-                        : "text-ink hover:text-ink"
-                    )}
+                    className={twMerge(`relative z-0 text-5xl lg:text-xl`)}
                   >
-                    {item.label}
+                    <span
+                      className={twMerge(
+                        `border-b-4 border-transparent lg:border-b-2`,
+                        pathname === item.href
+                          ? "text-ink border-ink"
+                          : "text-ink hover:text-ink"
+                      )}
+                    >
+                      {item.label}
+                    </span>
                     <FaChevronDown
                       className={twMerge(
                         `inline-block text-ink text-3xl ml-2 -mt-2 transition-all duration-500 ease-in-out lg:text-base lg:-mt-1 lg:ml-1`,
@@ -95,7 +99,7 @@ export const Menu = ({ setIsOpen, isOpen, navItems }: MenuProps) => {
                       >
                         <div
                           className={twMerge(
-                            `w-full min-w-[250px] text-center mt-2 pt-2 px-4 pb-12 shadow-lg lg:w-fit lg:pb-4 lg:rounded-b-lg`,
+                            `w-full min-w-[250px] text-center mt-6 pt-2 px-4 pb-12 shadow-lg lg:w-fit lg:mt-0 lg:pt-4 lg:pb-4 lg:rounded-b-lg`,
                             styles.submenu
                           )}
                         >
