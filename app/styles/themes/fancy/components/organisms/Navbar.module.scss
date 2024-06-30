@@ -16,24 +16,24 @@
 }
 .submenu {
   color: var(--paper-light);
-  background-color: var(--ink-light);
+  background-color: var(--tertiary-dark);
+  margin: 16px 0 0 0;
 }
 .activeSubNavItem,
 .subNavItem {
   transition: all 0.3s ease-in-out;
 }
 .activeSubNavItem {
-  color: var(--paper-light);
-  background-color: var(--ink-light);
+  color: var(--accent);
 }
 .subNavItem {
   color: var(--paper-light);
 }
 .activeSubNavItem:hover {
-  color: var(--paper-dark);
+  color: var(--accent-light);
 }
 .subNavItem:hover {
-  color: var(--paper-dark);
+  color: var(--accent-light);
 }
 @media (max-width: 992px) {
   .fadeIn {

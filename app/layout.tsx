@@ -90,7 +90,7 @@ export default function RootLayout({
                     },
                   ],
                 },
-                { label: "Test Page", href: "test-page", type: "link" },
+                { label: "Test Page", href: "test-page", type: "button" },
               ]}
               alert={<ThemeChanger />}
             />

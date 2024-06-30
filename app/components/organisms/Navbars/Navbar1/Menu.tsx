@@ -47,7 +47,7 @@ export const Menu = ({ setIsOpen, isOpen, navItems }: MenuProps) => {
       {navItems.map((item, index) => (
         <li
           key={index}
-          className="relative w-full py-2 transition-all duration-300 ease-in-out lg:px-2 lg:w-auto"
+          className="relative w-full py-6 transition-all duration-300 ease-in-out lg:py-0 lg:px-2 lg:w-auto"
         >
           {item.type === "link" ? (
             item.subNavItems ? (
@@ -90,7 +90,7 @@ export const Menu = ({ setIsOpen, isOpen, navItems }: MenuProps) => {
                   <AnimatePresence>
                     {isSubmenuOpen[index] && (
                       <motion.div
-                        className="w-full text-center lg:absolute lg:-z-10 lg:top-8 lg:w-fit lg:mt-2"
+                        className="w-full text-center lg:absolute lg:-z-10 lg:top-8 lg:w-fit"
                         initial="hidden"
                         animate="visible"
                         exit="hidden"
@@ -99,7 +99,7 @@ export const Menu = ({ setIsOpen, isOpen, navItems }: MenuProps) => {
                       >
                         <div
                           className={twMerge(
-                            `w-full min-w-[250px] text-center mt-6 pt-2 px-4 pb-12 shadow-lg lg:w-fit lg:mt-0 lg:pt-4 lg:pb-4 lg:rounded-b-lg`,
+                            `w-full min-w-[250px] text-center pt-2 px-4 pb-12 shadow-lg lg:w-fit lg:pt-4 lg:pb-4`,
                             styles.submenu
                           )}
                         >
@@ -169,11 +169,11 @@ export const Menu = ({ setIsOpen, isOpen, navItems }: MenuProps) => {
             <Link
               href={item.href}
               onClick={() => setIsOpen(false)}
-              className="mb-4 lg:ml-6 lg:mb-0"
+              className="w-full"
             >
               <Button
                 type="button"
-                className="hidden lg:flex"
+                className="hidden w-full items-center justify-center lg:flex"
                 color="ink"
                 variant="solid"
                 size="lg"
@@ -182,7 +182,7 @@ export const Menu = ({ setIsOpen, isOpen, navItems }: MenuProps) => {
               </Button>
               <Button
                 type="button"
-                className="w-[250px] flex items-center justify-center lg:hidden"
+                className="w-[250px] flex items-center justify-center mx-auto mt-4 lg:hidden"
                 color="ink"
                 variant="solid"
                 size="lg"
