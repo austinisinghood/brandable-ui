@@ -90,7 +90,7 @@ export function Basebar({ navItems }: MenuProps) {
               target="_blank"
               rel="noreferrer noopener"
             >
-              Built by <span className="underline">Hanker House</span>
+              Built by <span className="underline">Austin Isinghood</span>
             </a>
           </small>
         </motion.div>

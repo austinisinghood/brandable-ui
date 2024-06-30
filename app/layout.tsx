@@ -101,7 +101,6 @@ export default function RootLayout({
                 { label: "Home", href: "/" },
                 { label: "Brand", href: "/documentation/brand-guide" },
                 { label: "UI", href: "/documentation/ui-components" },
-                { label: "Test Page", href: "test-page" },
               ]}
             />
           </div>
