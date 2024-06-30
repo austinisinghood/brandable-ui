@@ -78,7 +78,7 @@ export const Menu = ({ setIsOpen, isOpen, navItems }: MenuProps) => {
                     {item.label}
                     <FaChevronDown
                       className={twMerge(
-                        `inline-block text-ink text-3xl mx-2 -mt-2 transition-all duration-500 ease-in-out lg:hidden`,
+                        `inline-block text-ink text-3xl ml-2 -mt-2 transition-all duration-500 ease-in-out lg:text-base lg:-mt-1 lg:ml-1`,
                         isSubmenuOpen[index] && `transform rotate-180`
                       )}
                     />
@@ -102,8 +102,8 @@ export const Menu = ({ setIsOpen, isOpen, navItems }: MenuProps) => {
                           {item.subNavItems.map((subNavItem, subIndex) =>
                             subNavItem.type === "link" ? (
                               <Link
-                                href={subNavItem.href}
                                 key={subIndex}
+                                href={subNavItem.href}
                                 className={twMerge(
                                   `block text-5xl border-b-4 border-transparent lg:text-xl lg:border-b-2 py-2`,
                                   pathname === subNavItem.href
