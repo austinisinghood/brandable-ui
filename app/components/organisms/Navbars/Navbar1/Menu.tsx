@@ -115,6 +115,7 @@ export const Menu = ({ setIsOpen, isOpen, navItems }: MenuProps) => {
                               </Link>
                             ) : (
                               <Link
+                                key={subIndex}
                                 href={subNavItem.href}
                                 onClick={() => setIsOpen(false)}
                                 className="w-full"
